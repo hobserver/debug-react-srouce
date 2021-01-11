@@ -1,8 +1,8 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
-// import App from './app';
-function App() {
-    return <div>1</div>
+import App from './app';
+function App1() {
+    return <div>112132</div>
 }
 ReactDOM.render(
     <App />,

@@ -69,12 +69,14 @@ module.exports = {
             __DEV__: 'true',
             __PROFILE__: 'true',
             __UMD__: 'true',
+            'process.env.NODE_ENV': "'development'",
             __EXPERIMENTAL__: true,
-            'process.env.NODE_ENV': "'development'"
-        }),
+            __VARIANT__: false
+          }),
         new replacePlugin()
     ],
     devServer: {
+        host: '0.0.0.0',
         port: 3100
     }
 }
