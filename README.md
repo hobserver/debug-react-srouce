@@ -1,6 +1,6 @@
 #搭建流程
 ## 下载改代码
-## 下载react 16.13源码, 解压到当前库react-master中
+## 下载react 17.0.0-alpha.0源码, 解压到当前库react-master中
 ## 在readt-master中执行 yarn, 安装react的依赖
 ## 在本库运行 npm install 
 ## npm start 即可运行

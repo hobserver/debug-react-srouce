@@ -1,7 +1,6 @@
 const React = require('react');
 const { Component, useState } = React;
 function DemoFunc() {
-    debugger
     const [data, setData] = useState(1);
     setTimeout(() => {
         setData(3);
@@ -10,6 +9,7 @@ function DemoFunc() {
 }
 class Demo extends Component {
     render () {
+        debugger
         return (
             <div>
                 <DemoFunc />
