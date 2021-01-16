@@ -1,8 +1,8 @@
 #搭建流程
-## 下载改代码
+## 下载react源代码
 执行git submodule init
 ## 将.yarnrc 复制到react目录下
-## 在react中执行 yarn, 安装react的依赖
+## 在react目录中执行 yarn, 安装react的依赖
 ## 在项目根目录执行yarn
 ## npm start 即可运行
 
@@ -13,9 +13,8 @@
 ![demo](https://github.com/lirongfei123/static/blob/master/demo.gif?raw=true)
 
 # webpack配置中的替换逻辑的提取过程
-## 执行打包程序中打包成浏览器版本的代码 FB_WWW_DEV
 ## 查看react/scripts/rollup/bundles.js
-将里面`bundles`变量注释，换成只打包两个版本的
+将里面`bundles`变量注释，取个别名，换成只打包两个版本的
 ```
 const bundles = [
   {
@@ -52,7 +51,11 @@ console.log({
 }, forks)
 ```
 打印出来的，react，以及react-dom的内容，就是webpack当中需要替换的内容
-
+参考webpack/replace.js 当中的替换内容
 ## 去除 `scheduler: 'shared/forks/Scheduler.umd.js',` 这一行
 ## 去除 `'scheduler/tracing': 'shared/forks/SchedulerTracing.umd.js',` 这一行
 ## 去除 `'react-shallow-renderer': 'react-shallow-renderer/esm/index.js',` 这一行
+
+# 增加NODE_PATH, react/packages, 从而使react等各种包直接引用packages当中的包
+
+# 增加webpack配置中resolve.modules的配置，增加 react/packages
