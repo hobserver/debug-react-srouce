@@ -5,10 +5,11 @@
 "use strict";
 
 const path = require("path");
-// module.paths.unshift(path.join(__dirname, '../react-master/node_modules'));
+// module.paths.unshift(path.join(__dirname, '../react/packages'));
+// console.log(module);
 const obj = {
-    'object-assign': 'shared/forks/object-assign.inline-umd.js',
-//   'react-shallow-renderer': 'react-shallow-renderer/esm/index.js',
+  'object-assign': 'shared/forks/object-assign.inline-umd.js',
+  // 'react-shallow-renderer': 'react-shallow-renderer/esm/index.js',
   'shared/ReactSharedInternals': 'react/src/ReactSharedInternals',
   'scheduler/src/SchedulerFeatureFlags': 'scheduler/src/SchedulerFeatureFlags',
   'scheduler/src/SchedulerHostConfig': 'scheduler/src/forks/SchedulerHostConfig.default',
@@ -16,12 +17,12 @@ const obj = {
   'react-reconciler/src/ReactFiberReconciler': 'react-reconciler/src/ReactFiberReconciler.old.js',
   'react-reconciler/src/ReactFiberHotReloading': 'react-reconciler/src/ReactFiberHotReloading.old.js',
   'object-assign': 'shared/forks/object-assign.umd.js',
-//   'react-shallow-renderer': 'react-shallow-renderer/esm/index.js',
-//   scheduler: 'shared/forks/Scheduler.umd.js',
-//   'scheduler/tracing': 'shared/forks/SchedulerTracing.umd.js',
+  // 'react-shallow-renderer': 'react-shallow-renderer/esm/index.js',
+  // scheduler: 'shared/forks/Scheduler.umd.js',
+  // 'scheduler/tracing': 'shared/forks/SchedulerTracing.umd.js',
   'scheduler/src/SchedulerFeatureFlags': 'scheduler/src/SchedulerFeatureFlags',
   'scheduler/src/SchedulerHostConfig': 'scheduler/src/forks/SchedulerHostConfig.default',
-//   'react/src/ReactSharedInternals.js': 'react/src/forks/ReactSharedInternals.umd.js',
+  'react/src/ReactSharedInternals.js': 'react/src/forks/ReactSharedInternals.umd.js',
   'react-reconciler/src/ReactFiberReconciler': 'react-reconciler/src/ReactFiberReconciler.old.js',
   'react-reconciler/src/ReactFiberHotReloading': 'react-reconciler/src/ReactFiberHotReloading.old.js',
   'react-reconciler/src/ReactFiberHostConfig': 'react-reconciler/src/forks/ReactFiberHostConfig.dom.js',
@@ -29,21 +30,6 @@ const obj = {
   'react-server/src/ReactServerFormatConfig': 'react-server/src/forks/ReactServerFormatConfig.dom.js',
   'react-server/src/ReactFlightServerConfig': 'react-server/src/forks/ReactFlightServerConfig.dom.js',
   'react-client/src/ReactFlightClientHostConfig': 'react-client/src/forks/ReactFlightClientHostConfig.dom.js'
-	// 'shared/ReactSharedInternals': 'react/src/ReactSharedInternals',
-    // 'scheduler/src/SchedulerFeatureFlags': 'scheduler/src/SchedulerFeatureFlags',
-    // 'scheduler/src/SchedulerHostConfig': 'scheduler/src/forks/SchedulerHostConfig.default',
-    // // 'react/src/ReactSharedInternals.js': 'react/src/forks/ReactSharedInternals.umd.js',
-    // // 'object-assign': 'shared/forks/object-assign.umd.js',
-    // // "scheduler": 'shared/forks/Scheduler.umd.js',
-    // // 'scheduler/tracing': 'shared/forks/SchedulerTracing.umd.js',
-    // 'scheduler/src/SchedulerFeatureFlags': 'scheduler/src/SchedulerFeatureFlags',
-    // 'scheduler/src/SchedulerHostConfig': 'scheduler/src/forks/SchedulerHostConfig.default',
-    // // 'react/src/ReactSharedInternals.js': 'react/src/forks/ReactSharedInternals.umd.js',
-    // 'react-reconciler/src/ReactFiberHostConfig': 'react-reconciler/src/forks/ReactFiberHostConfig.dom.js',
-    // 'react-server/src/ReactServerHostConfig': 'react-server/src/forks/ReactServerHostConfig.dom.js',
-    // 'react-server/src/ReactServerFormatConfig': 'react-server/src/forks/ReactServerFormatConfig.dom.js',
-    // 'react-flight/src/ReactFlightClientHostConfig': 'react-flight/src/forks/ReactFlightClientHostConfig.dom.js',
-    // 'legacy-events/ResponderTopLevelEventTypes': 'legacy-events/forks/ResponderTopLevelEventTypes.dom.js'
 }
 class ReactRuntimeReplace {
 	constructor(resourceRegExp, newResource) {

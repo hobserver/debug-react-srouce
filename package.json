@@ -4,7 +4,7 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "NODE_PATH=./react-master/packages webpack-dev-server --config webpack/webpack.config.js"
+    "start": "NODE_PATH=./react/packages webpack-dev-server --config webpack/webpack.config.js"
   },
   "dependencies": {
     "@babel/core": "^7.1.0",

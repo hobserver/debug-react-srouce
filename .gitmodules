@@ -1,0 +1,4 @@
+[submodule "react"]
+	path = react
+	url = https://github.com/facebook/react.git
+	branch = 17.0.1

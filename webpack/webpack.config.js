@@ -13,7 +13,7 @@ module.exports = {
     },
     resolve: {
         modules: [
-            path.join(__dirname, '../react-master/packages'),
+            path.join(__dirname, '../react/packages'),
             'node_modules',
         ]
     },
@@ -22,7 +22,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 loader: "babel-loader",
-                include: /(?:react-master\/packages)|src/,
+                include: /(?:react\/packages)|src/,
                 options: {
                     babelrc: false,
                     exclude: /node_modules/,
@@ -50,12 +50,12 @@ module.exports = {
                     ],
                     plugins: [
                         [
-                            require('../react-master/scripts/babel/transform-replace-console-calls'),
+                            require('../react/scripts/babel/transform-replace-console-calls'),
                             {
                                 shouldError: false,
                             },
                         ],
-                        require('../react-master/scripts/error-codes/transform-error-messages'),
+                        require('../react/scripts/error-codes/transform-error-messages'),
                         '@babel/plugin-proposal-class-properties',
                         '@babel/plugin-proposal-object-rest-spread'
                     ]
