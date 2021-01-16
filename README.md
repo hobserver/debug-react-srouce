@@ -56,6 +56,6 @@ console.log({
 ## 去除 `'scheduler/tracing': 'shared/forks/SchedulerTracing.umd.js',` 这一行
 ## 去除 `'react-shallow-renderer': 'react-shallow-renderer/esm/index.js',` 这一行
 
-# 增加NODE_PATH, react/packages, 从而使react等各种包直接引用packages当中的包
-
-# 增加webpack配置中resolve.modules的配置，增加 react/packages
+# webpack配置改造
+## 增加NODE_PATH, react/packages, 从而使react等各种包直接引用packages当中的包
+## 增加webpack配置中resolve.modules的配置，增加 react/packages
